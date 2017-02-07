@@ -7,10 +7,11 @@ angular.module('punchFormController.module',[]).controller('punchFormController'
 		$http.post("http://techtechnics.com/Dashboard/punch.php",obj)
     	   .then(function(data,status,headers,config){
             console.log("Status is : " + data.status);
-            console.log(data);
+            $scope.msg=data.data;
         }, function(response) {
           $scope.data = response.data || 'Request failed';
-          $scope.status = response.status;
+         // $scope.status = response.status;
+          $scope.msg  = "There is some error";
           console.log($scope.data);
           console.log("here");
           console.log($scope.status);
