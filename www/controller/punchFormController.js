@@ -1,5 +1,5 @@
 angular.module('punchFormController.module',[]).controller('punchFormController', function($scope,$location,$http){
-	$scope.punch_func=function(){
+  $scope.punch_func=function(){
 		var obj = {};
 	        obj['id'] = $scope.punch_id;
 	        obj['pin'] = $scope.punch_pin;
